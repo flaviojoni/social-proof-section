@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Spartan', sans-serif;
+    background-color: var(--white);
+    background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+}
+
+main {
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+
+h1 {
+    font-weight: 700;
+    color: var(--very-dark-magenta);
+    padding: 24px;
+}
+
+main p {
+    color: var(--dark-grayish-magenta);
+    padding: 14px;
+}
+
+/* STARS CARD */
+.stars-c {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    max-width: 330px;
+    background-color: var(--light-grayish-magenta);
+    border-radius: 10px;
+    margin: 0 auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+.stars-img img {
+    padding: 2px;
+}
+
+.stars-c h3 {
+    font-size: 15px;
+    color: var(--very-dark-magenta);
+    padding-top: 6px;
+}
+
+/* PURPLE CARD */
+.card-p {
+    display: grid;
+    align-items: center;
+    background-color: var(--very-dark-magenta);
+    max-width: 330px;
+    margin: 0 auto;
+    border-radius: 10px;
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+.card-p-intern {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    padding-top: 32px;
+}
+
+.card-p-intern img {
+    border-radius: 50%;
+    width: 48px;
+    display: block;
+    margin: 0 auto;
+}
+
+.card-p-intern h4 {
+    color: var(--light-grayish-magenta);
+}
+
+.card-p-intern h5 {
+    color: var(--soft-pink);
+    font-weight: 400;
+    padding-top: 4px;
+}
+
+.card-p p {
+    padding: 24px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.purple-cards {
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+/* ---------------------------*/
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.t-c {
+    text-align: center;
+}
