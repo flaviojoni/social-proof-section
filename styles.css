@@ -64,7 +64,7 @@ main p {
 }
 
 /* PURPLE CARD */
-.card-p {
+.card1, .card2, .card3 {
     display: grid;
     align-items: center;
     background-color: var(--very-dark-magenta);
@@ -100,7 +100,7 @@ main p {
     padding-top: 4px;
 }
 
-.card-p p {
+.card1 p, .card2 p, .card3 p {
     padding: 24px;
     padding-bottom: 32px;
     font-size: 14px;
@@ -117,11 +117,101 @@ main p {
 .attribution {
     font-size: 11px;
     text-align: center;
-  }
+}
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
 
 .t-c {
     text-align: center;
+}
+
+/* MEDIAS */
+@media only screen and (min-width: 1024px) {
+    /* BODY */
+    body {
+        background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: 0.7fr 1fr;
+        grid-template-rows: 1fr 1fr;   
+        grid-template-areas: "text stars"
+        "cards cards"
+        "att att";
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .text {
+        grid-area: text;
+        margin-left: 100px;
+    }
+
+    .card-stars {
+        grid-area: stars;
+    }
+
+    .purple-cards {
+        grid-area: cards;
+    }
+
+    .t-c {
+        text-align: initial;
+    }
+
+    /* STARS CARD */
+    .stars-c {
+        grid-template-columns: 0.5fr 1fr;
+        max-width: initial;
+        width: 475px;
+        padding-right: 24px;
+        padding-left: 24px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .stars-img img {
+        padding: 2px;
+    }
+
+    .stars-c h3 {
+        font-size: 15px;
+        color: var(--very-dark-magenta);
+        padding-top: 6px;
+    }
+
+    .stars-c:first-child {
+        margin-right: 100px;
+    }
+
+    .stars-c:last-child {
+        margin-left: 100px;
+    }
+
+    /* PURPLE CARDS */
+    .purple-cards {
+        grid-area: cards;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        gap: 24px;
+    }
+
+    .card2 {
+        margin-top: 16px;
+    }
+
+    .card3 {
+        margin-top: 32px;
+    }
+
+    .attribution {
+        grid-area: att;
+    }
 }
